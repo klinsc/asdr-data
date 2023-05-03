@@ -1,4 +1,4 @@
-# REAL-TIME PROTECTIVE OBJECT DETECTION
+# REAL-TIME PROTECTIVE OBJECT DETECTION: RPOD
 
 ## Experimenting on YOLO3
 1. Colab https://colab.research.google.com/drive/1_NGdtAdUg_JcjSuQOXvVyYOcu92OS9J1?usp=sharing
