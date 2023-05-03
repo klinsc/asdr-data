@@ -1,4 +1,4 @@
-# REAL-TIME PROTECTIVE RELAY DETECTION
+# REAL-TIME PROTECTIVE OBJECT DETECTION
 
 ## Experimenting on YOLO3
 1. Colab https://colab.research.google.com/drive/1_NGdtAdUg_JcjSuQOXvVyYOcu92OS9J1?usp=sharing
