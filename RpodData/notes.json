@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "115LA"
+    },
+    {
+      "id": 1,
+      "name": "115VT1P"
+    },
+    {
+      "id": 2,
+      "name": "115VT3P"
+    },
+    {
+      "id": 3,
+      "name": "22VT"
+    },
+    {
+      "id": 4,
+      "name": "Dyn1"
+    }
+  ],
+  "info": {
+    "year": 2023,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}
