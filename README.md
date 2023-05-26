@@ -21,3 +21,13 @@
     - The test result is not good, the model could not detect most of the objects in the test images.
     - I think the reason is that the bouding box that were drawn on the images are not accurate enough.
     - I will try to draw the bouding box more accurate and try again.
+
+5. I have tried to draw the bouding box more accurate, more consistent and focus more on the main symbol of components, e.g., I ignored information from label of components.
+    - Also, I increase the weight of line of the whole diagram to 2.5mm.
+    - The train images were export from CAD files as .pdf files, then I used the tool of pdf2image to convert them to .png files.
+    - The result is better than before. The model could detect most of the objects in the test images.
+    - Some evidence shows that the symbols that were drawn in the future area (area with grey background) is more effective than the symbols that were drawn in the normal area (area with white background).
+    - We can conclude that the impact factor here are consistency of bounding box, line weight and background color.
+
+6. We will do a new experiment, with the same data, but with more classes. Also we will use the new version of YOLO, YOLOv8 from mmDetection.
+    - This time we will include some metrics to evaluate the model, e.g., mAP, mAR, loss/e etc.
