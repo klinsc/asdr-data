@@ -161,3 +161,8 @@ cython_debug/
 
 VOCdevkit
 darknet
+*.dwg
+*.bak
+rpod2/*/**
+rpod3/*/**
+rpod5/*/**
