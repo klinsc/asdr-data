@@ -1,0 +1,13 @@
+/bib-BangPaIn2-sm-dbds-1.png
+/bib-BangPaIn2-sm-dbds-2.png
+/fya-PLAENG YAO-m-h.png
+/gua-KhlongNueng-sm-h.png
+/kbm-KabinBuri5-m-bh.png
+/llm-LamLukKa3-m-h.png
+/mlk-MuakLek-sm-mt.png
+/nla-Nakhonluang-m-mt.png
+/nvm-NavaNakhon2-sm-dbsb.png
+/pab-PrachinBuri2-m-bh.png
+/pld-Phitsanulok4-m-bh.png
+/rco-Rotchana2-m-mt.png
+/rsb-RangSitTai2-mt-dbsb.png

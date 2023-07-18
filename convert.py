@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # query sub folders
 import os
-rootdir = './rpod2/c2'
+rootdir = './rpod5/c1'
 
 for subdir, dirs, files in os.walk(rootdir):
     for file in files:
@@ -19,7 +19,7 @@ for subdir, dirs, files in os.walk(rootdir):
             page = 0
             PDF_PATH = filepath
             convert_from_path(PDF_PATH, dpi=300, single_file=True, first_page=page, last_page=page+1, output_folder=rootdir+'/'+filename,
-                              output_file=filename, fmt="png", poppler_path=r'C:\poppler-23.01.0\Library\bin')
+                              output_file=filename, fmt="jpg", poppler_path=r'C:\poppler-23.01.0\Library\bin')
             # plt.imshow(img)
             # plt.show()
 

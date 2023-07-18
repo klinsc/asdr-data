@@ -32,12 +32,12 @@
         <Label value="NGR" background="#B20DFF" />
         <Label value="NGR_future" background="#B20DD0" />
         <Label value="Q" background="#7A0DB2" />
-        <Label value="relays" background="#F20DFF" />
         <Label value="remote_io_module" background="#0DB2B2" />
         <Label value="ss_man_mode" background="#F20D3C" />
         <Label value="tele_protection" background="#0DACEF" />
         <Label value="terminator_double" background="#0DB27A" />
         <Label value="terminator_single" background="#0DB2B2" />
+        <Label value="terminator_splicing_kits" background="#FD7AB2" />
         <Label value="terminator_w_future" background="#0D7AB2" />
         <Label value="v_m" background="#0DB24C" />
         <Label value="v_m_digital" background="#0DB27A" />
