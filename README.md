@@ -30,7 +30,6 @@
   
 
 ## Experimenting on YOLOv4
-
 4. Finally I could train the model with the custom objects data of MRD & SMRD with help of YOLO4
 
 	* Using the tutorial of https://github.com/AlexeyAB/darknet I could train the model on Google Colab.
@@ -61,7 +60,7 @@
 
 	* This time we **will include some metrics** to evaluate the model, e.g., mAP, mAR, loss/e etc.
   
-
+## 1st Thesis Progress Evaluation - SIIT
 7. **After** the presentation of **1st Thesis Progress Evaluation**, I decided to use YOLOv5 instead of v8. The reason is that I want to start from a smaller and simpler version first.
 
 	* I tried using **mmYOLOv5** with the default configs, but it **is not working**. No matter how I tried, the prediction result is always the same. It did detect a few objects in the first few times, but after that, it is not detecting anything.
@@ -80,6 +79,7 @@
 
 	* I will pause the training for now, and start developing the semi-automatic labelling interface.
 
+## Semi-automatic Labelling
 8. Semi-automatic Labelling
 	* The **semi-automatic labelling interface was successfully developed**. Using the Labelstudio framework, but prediction results are **not accurate enough**. But this is what I expected, for the model is not trained enough. I will continue training the model with the help of the semi-automatic labelling interface.
 
@@ -89,3 +89,38 @@
 
 9. Training with more images (a larger dataset)
 	* One idea that I got from my colleague is, I should **have datasets with different line weights or colors**. Then test them seperately and see the metrics results, that could be **used as contribution to this research field**.
+
+10. **Create the database** for diagnosing the number of components.
+	* This process **had to be paused**, since my advisor suggested that we should focus on the completion of overall flow first.
+
+## Create a whole process
+11. **After the 3rd Thesis Advisor Meeting**, the advisor told me to **focus on whe whole process** rather than the accuracies or the models.
+	* Firstly, I should create a **standalone python script** that can specify drawing type and read PDF of the drawing, then generate **CSV file of bounding box**. (Deadling 25thJul2023)
+	* Secondly, I would **create the database for diagnosis process** of drawings.
+	* Lastly, these are the **comments** from my advisor and its answer I had searched for so far,
+		* Compare **YOLOv8 with v5**
+			1) Has the **new backbone** -> more efficient & powerful
+			2) Has more **streamlined design** -> easier to compare its performance with older models in YOLO family. More simplified architecture and **less number of parameters**.
+			3) Supports **full range of Vision AI Tasks**.
+		* Can we get **total number of components**?
+			1) Yes, we can find it in **"labels.jpg"** in result folder of YOLOv5.
+		* Does YOLOv5 has a feature that can improve imbalanced data?
+			1) It does have a feature called **"focal loss"**, a modified version of cross-entropy loss, it **assigns more weight to hard examples and less weight to easy examples**. -> It is not enabled by default, we can set it by parameter "fl_gamma", and 0.0 means no focal loss applied.
+
+12. **Develop a stanalone python script**.
+	* I switched from "a stanalone python script" to be a whole process. With two repositories "asdr-t3" and "asdr-flask".
+	* With NextJS as front-end&back-end, and use Flask server to handle convertion of a file from PDF to JPG, the prediction and diagnosis of JPG.
+	* The Web app is the front-end, where a user uses for uploading the PDF file of drawing(s), and displaying the diagnosed result(s). When a user uploading any PDF file(s) here, it will then being send to the Flask server.
+	* The Flask server, then converts the PDF file(s) into JPG file(s), and sends them back to NextJS, for a user might want to check if he or she uploaded the correct file(s) or not.
+	* After previewing at NextJS, the user can now press the "Predict Button" which will send the images to the Flask server again for the prediction and diagnosis.
+	* Finally, the Flask send the diagnosis results back to Nextjs and show them to the user.
+	
+
+
+
+
+
+
+> * This "asdr-t3" comes from "t3" which is a full-stack,  typesafe Next.js app framework. It is bundled with NextJS, Typescript, tRPC, Prisma, and NextAuth.js.
+> * NextJS is for front-end rendering, tRPC for typesafe API calling, Prisma for handling the database, NextAuth.js for authentication feature. (future)
+> * Whereas the "asdr-flask" is the simple Flask server that used to handle converting, predicting and diagnosis drawings.
