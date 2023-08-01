@@ -3,14 +3,14 @@
     <RectangleLabels name="label" toName="image">
         <Label value="11522_tx_dyn1" background="#6344B2" />
         <Label value="11522_tx_ynyn0d1" background="#3C57B0" />
-        <Label value="115_1way_ds_w_motor" background="#EAE11F" />
+        <Label value="115_1way_ds_w_motor" background="#B2AA0A" />
         <Label value="115_3ways_ds" background="#B20D0D" />
         <Label value="115_3ways_ds_w_motor" background="#B20D0D" />
-        <Label value="115_breaker" background="#0D99FF" />
+        <Label value="115_breaker" background="#F20D7A" />
         <Label value="115_buffer" background="#B20D0D" />
         <Label value="115_cvt_1p" background="#1CBCD2" />
         <Label value="115_cvt_3p" background="#E62A64" />
-        <Label value="115_ds" background="#7E0808" />
+        <Label value="115_ds" background="#B20D0D" />
         <Label value="115_gs" background="#B20D3C" />
         <Label value="115_gs_w_motor" background="#f287f5" />
         <Label value="115_la" background="#9936AC" />
