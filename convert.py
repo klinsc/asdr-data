@@ -1,29 +1,52 @@
+# a script to convert pdf to png
+# Path: convert.py .
 from pdf2image import convert_from_path
 import matplotlib.pyplot as plt
 
-# for every subfolder in c1, convert pdf to png and save in the same folder
+# for every subfolder in path argument, convert pdf to png and save in the same folder
 
 # query sub folders
 import os
-rootdir = './rpod5/c1'
+import sys
+from tqdm import tqdm
+rootdir = sys.argv[1]
 
-for subdir, dirs, files in os.walk(rootdir):
-    for file in files:
-        # print os.path.join(subdir, file)
-        filepath = subdir + os.sep + file
 
-        if filepath.endswith(".pdf"):
-            print(filepath)
-            filename = os.path.splitext(file)[0]
-            print(filename)
-            page = 0
-            PDF_PATH = filepath
-            convert_from_path(PDF_PATH, dpi=300, single_file=True, first_page=page, last_page=page+1, output_folder=rootdir+'/'+filename,
-                              output_file=filename, fmt="jpg", poppler_path=r'C:\poppler-23.01.0\Library\bin')
-            # plt.imshow(img)
-            # plt.show()
+def convert_pdf_to_png(filepath, dirs, subdir):
+    if filepath.endswith(".pdf"):
+        # convert pdf to png
+        pages = convert_from_path(filepath, dpi=300, single_file=True, first_page=0, last_page=1,
+                                  fmt="png", poppler_path=r'C:\poppler-23.01.0\Library\bin')
 
-# page = 0
-# PDF_PATH = './LabelData/c1/bib-BangPaIn2-sm-dbds-1/bib-BangPaIn2-sm-dbds-1.pdf'
-# convert_from_path(PDF_PATH, dpi=300, first_page=page, last_page=page+1, output_folder="./",
-#                             output_file=filename, fmt="png", poppler_path=r'C:\poppler-23.01.0\Library\bin')
+        # save png to same folder of pdf
+        filename = os.path.splitext(os.path.basename(filepath))[0]
+        pages[0].save(os.path.join(subdir, filename + ".png"), "PNG")
+
+        # # show png
+        # plt.imshow(pages[0])
+        # plt.show()
+
+
+def main():
+    # check argument is passed
+    if len(sys.argv) < 2:
+        print("Please provide path to folder")
+        return
+
+    # check path is valid
+    if not os.path.isdir(rootdir):
+        print("Path is not valid")
+        return
+
+    # for i in tqdm(range(0, 100), desc="Loading..."):
+    # for subdir, dirs, files in os.walk(rootdir):
+    for i, (subdir, dirs, files) in tqdm(enumerate(os.walk(rootdir)), desc="Loading…", ascii=False, ncols=75):
+        print(subdir, dirs, files)
+        for file in files:
+            # print os.path.join(subdir, file)
+            filepath = subdir + os.sep + file
+            convert_pdf_to_png(filepath, dirs, subdir)
+
+
+if __name__ == "__main__":
+    main()
