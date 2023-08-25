@@ -1,0 +1,15 @@
+    --wv-green: #0cce6b;
+    --wv-orange: #ffa400;
+    --wv-red: #ff4e42;
+    --develop-start-gradient: #007cf0;
+    --develop-end-gradient: #00dfd8;
+    --develop-line-end: #019ae9;
+    --develop-text: #0a72ef;
+    --preview-start-gradient: #7928ca;
+    --preview-end-gradient: #ff0080;
+    --preview-line-end: #9a1fb8;
+    --preview-text: #de1d8d;
+    --ship-start-gradient: #ff4d4d;
+    --ship-end-gradient: #f9cb28;
+    --ship-line-end: #f9cb28;
+    --ship-text: #ff5b4f;
