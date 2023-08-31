@@ -4,7 +4,6 @@
         <Label value="11522_tx_dyn1" background="#6344B2" />
         <Label value="11522_tx_ynyn0d1" background="#3C57B0" />
         <Label value="115_1way_ds_w_motor" background="#B2AA0A" />
-        <Label value="115_3ways_ds" background="#B20D0D" />
         <Label value="115_3ways_ds_w_motor" background="#B20D0D" />
         <Label value="115_breaker" background="#F20D7A" />
         <Label value="115_buffer" background="#B20D0D" />
