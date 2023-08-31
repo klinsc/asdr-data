@@ -19,8 +19,7 @@ def convert_pdf_to_png(filepath, dirs, subdir):
                                   fmt="png", poppler_path=r'C:\poppler-23.01.0\Library\bin')
 
         # save png to same folder of pdf
-        filename = os.path.splitext(os.path.basename(filepath))[0]
-        pages[0].save(os.path.join(subdir, filename + ".png"), "PNG")
+        pages[0].save(filepath.replace(".pdf", ".png"), "PNG")
 
         # # show png
         # plt.imshow(pages[0])
