@@ -1,9 +1,9 @@
-# a script to convert pdf to png
+# a script to convert pdf to jpg
 # Path: convert.py .
 from pdf2image import convert_from_path
 import matplotlib.pyplot as plt
 
-# for every subfolder in path argument, convert pdf to png and save in the same folder
+# for every subfolder in path argument, convert pdf to jpg and save in the same folder
 
 # query sub folders
 import os
@@ -12,16 +12,16 @@ from tqdm import tqdm
 rootdir = sys.argv[1]
 
 
-def convert_pdf_to_png(filepath, dirs, subdir):
+def convert_pdf_to_jpg(filepath, dirs, subdir):
     if filepath.endswith(".pdf"):
-        # convert pdf to png
+        # convert pdf to jpg
         pages = convert_from_path(filepath, dpi=300, single_file=True, first_page=0, last_page=1,
-                                  fmt="png", poppler_path=r'C:\poppler-23.01.0\Library\bin')
+                                  fmt="jpg", poppler_path=r'C:\poppler-23.01.0\Library\bin')
 
-        # save png to same folder of pdf
-        pages[0].save(filepath.replace(".pdf", ".png"), "PNG")
+        # save jpg to same folder of pdf
+        pages[0].save(filepath.replace(".pdf", ".jpg"), "JPEG")
 
-        # # show png
+        # # show jpg
         # plt.imshow(pages[0])
         # plt.show()
 
@@ -44,7 +44,7 @@ def main():
         for file in files:
             # print os.path.join(subdir, file)
             filepath = subdir + os.sep + file
-            convert_pdf_to_png(filepath, dirs, subdir)
+            convert_pdf_to_jpg(filepath, dirs, subdir)
 
 
 if __name__ == "__main__":
