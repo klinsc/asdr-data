@@ -23,14 +23,12 @@
         <Label value="22_ds_la_out" background="#0DB20D" />
         <Label value="22_gs" background="#0D0DB2" />
         <Label value="22_ll" background="#16448c" />
-        <Label value="22_vt_1p" background="#3CB20D" />
         <Label value="22_vt_3p" background="#1F9AEE" />
         <Label value="BCU" background="#B88000" />
         <Label value="DIM" background="#B20D0D" />
         <Label value="DPM" background="#B24CCC" />
         <Label value="LL" background="#0DB2B2" />
         <Label value="MU" background="#0DACEF" />
-        <Label value="NGR" background="#B20DFF" />
         <Label value="NGR_future" background="#B20DD0" />
         <Label value="Q" background="#7A0DB2" />
         <Label value="remote_io_module" background="#0DB2B2" />
