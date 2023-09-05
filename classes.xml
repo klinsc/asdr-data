@@ -18,7 +18,6 @@
         <Label value="22_breaker" background="#3C0DB2" />
         <Label value="22_cap_bank" background="#0DB24C" />
         <Label value="22_ds" background="#7AB20D" />
-        <Label value="22_ds_out" background="#B2AA0A" />
         <Label value="22_ds_la_out" background="#0DB20D" />
         <Label value="22_gs" background="#0D0DB2" />
         <Label value="22_ll" background="#16448c" />
